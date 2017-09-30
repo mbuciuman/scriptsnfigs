@@ -1,0 +1,72 @@
+! #########################################
+!
+!    Config
+!
+urxvt*background:                   #1F1F1F
+urxvt*foreground:                    #25cb4e
+urxvt*fading:                            0
+urxvt*tintColor:                        #000000
+urxvt*shading:                         0
+urxvt*inheritPixmap:                false
+urxvt*scrollBar:                        false
+urxvt*title:                               urxvt
+urxvt*termName:                  rxvt-unicode
+urxvt*scrollTtyKeypress:          true
+urxvt*scrollTtyOutput:             false
+urxvt*scrollWithBuffer:            true
+urxvt*perl-lib:                          /usr/lib/urxvt/perl
+urxvt*perl-ext-common:          default,matcher,selection-pastebin
+urxvt*urlLauncher:                  firefox
+urxvt*matcher.button:            1
+urxvt*scrollstyle:                    plain
+urxvt*secondaryScroll:           true
+urxvt*cutchars: "`\"()'*<>[]{|}"
+!urxvt*font: xft:DejaVu Sans Mono for Powerline:style=Book:antialias=true:pixelsize=13:hinting=true
+urxvt*font: xft:PragmataPro for Powerline:style=Regular:antialias=true:pixelsize=13:hinting=true
+!urxvt*font: xft:PragmataPro Nerd Font:style=Regular:antialias=true:pixelsize=13:hinting=true
+urxvt*iconName:                   rxvt-unicode
+urxvt.utf8: 1
+urxvt.iso14755: false
+urxvt.iso14755_52: false
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+! #########################################
+!
+!    Keybinds
+!
+urxvt.keysym.C-C: perl:clipboard:copy
+urxvt.keysym.C-V: perl:clipboard:paste
+urxvt.keysym.C-A-V: perl:clipboard:paste_escaped
+
+! #########################################
+!
+!    Colors
+!
+! Black
+*color0:      #131212
+*color8:      #474747
+! Red
+*color1:      #b30000
+*color9:      #800000
+! Green
+*color2:      #299E1B
+*color10:     #77E768
+! Yellow
+*color3:      #96833F
+*color11:     #D0B249
+! Blue
+*color4:      #2467AD
+*color12:     #6B90EE
+! Purple
+*color5:      #655272
+*color13:     #9F75BA
+! Cyan
+*color6:      #92B19E
+*color14:     #A1CDCD
+! White
+*color7:      #FFFFFF
+*color15:     #97927C
