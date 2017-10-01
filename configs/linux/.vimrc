@@ -102,7 +102,7 @@ if !exists(":DiffOrig")
 endif
 
 " Sets up line number displayed over relative line number (so line number shows up over the relative number's 0)
-set relativenumber
+"set relativenumber
 set number
 
 " Loads helptags (apparently not)
@@ -117,6 +117,7 @@ filetype plugin on
 
 " vim-airline config lines
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ''
 " let g:airline#extensions#syntastic#enabled = 0
 let g:airline_powerline_fonts = 1
 set encoding=utf-8
@@ -126,8 +127,8 @@ set laststatus=2
 " set statusline+=%*
 let form_enhanced_color=1
 " set guifont=Cousine\ for\ Powerline\ 12px
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12px
-set antialias
+" set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 12px
+" set antialias
 let g:airline_theme='badwolf'
 colorscheme badwolf
 
@@ -139,9 +140,9 @@ colorscheme badwolf
 " let g:indent_guides_enable_on_vim_startup = 1
 " let g:indent_guides_start_level = 2
 " let g:indent_guides_guide_size = 1
-set tabstop=5
-set shiftwidth=5
-set expandtab
+set tabstop=4
+set shiftwidth=4
+" set expandtab
 
 " Keybind to show whitespace
 " nmap <F3> <Plug>ShowWhiteToggle

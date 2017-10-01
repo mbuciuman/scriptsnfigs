@@ -2,6 +2,33 @@
 !
 !    Config
 !
+urxvt256c*background:                   #1F1F1F
+urxvt256c*foreground:                    #25cb4e
+urxvt256c*fading:                            0
+urxvt256c*tintColor:                        #000000
+urxvt256c*shading:                         0
+urxvt257c*inheritPixmap:                false
+urxvt256c*scrollBar:                        false
+urxvt256c*title:                               urxvt
+urxvt256c*termName:                  rxvt-unicode
+urxvt256c*scrollTtyKeypress:          true
+urxvt256c*scrollTtyOutput:             false
+urxvt256c*scrollWithBuffer:            true
+urxvt256c*perl-lib:                          /usr/lib/urxvt/perl
+urxvt256c*perl-ext-common:          default,matcher,selection-pastebin
+urxvt256c*urlLauncher:                  firefox
+urxvt256c*matcher.button:            1
+urxvt256c*scrollstyle:                    plain
+urxvt256c*secondaryScroll:           true
+urxvt256c*cutchars: "`\"()'*<>[]{|}"
+!urxvt256c*font: xft:PragmataPro for Powerline:style=Regular:antialias=true:pixelsize=13:hinting=true
+!urxvt256c*font: xft:PragmataPro Nerd Font:style=Book:antialias=true:pixelsize=13:hinting=true,xft:DejaVuSansMono Nerd Font:style=Book
+urxvt256c*font: xft:DejaVuSansMono Nerd Font:style=Book:pixelsize=13
+!urxvt256c*iconName:                   rxvt-unicode
+!urxvt256c.utf8: 1
+!urxvt256c.iso14755: false
+!urxvt256c.iso14755_52: false
+!urxvt256c.letterSpace: 2
 urxvt*background:                   #1F1F1F
 urxvt*foreground:                    #25cb4e
 urxvt*fading:                            0
@@ -21,13 +48,14 @@ urxvt*matcher.button:            1
 urxvt*scrollstyle:                    plain
 urxvt*secondaryScroll:           true
 urxvt*cutchars: "`\"()'*<>[]{|}"
-!urxvt*font: xft:DejaVu Sans Mono for Powerline:style=Book:antialias=true:pixelsize=13:hinting=true
-urxvt*font: xft:PragmataPro for Powerline:style=Regular:antialias=true:pixelsize=13:hinting=true
-!urxvt*font: xft:PragmataPro Nerd Font:style=Regular:antialias=true:pixelsize=13:hinting=true
+!urxvt*font: xft:PragmataPro for Powerline:style=Regular:antialias=true:pixelsize=13:hinting=true
+!urxvt*font: xft:PragmataPro Nerd Font:style=Book:antialias=true:pixelsize=13:hinting=true,xft:DejaVuSansMono Nerd Font:style=Book
+urxvt*font: xft:DejaVuSansMono Nerd Font:style=Book
 urxvt*iconName:                   rxvt-unicode
 urxvt.utf8: 1
 urxvt.iso14755: false
 urxvt.iso14755_52: false
+!urxvt.letterSpace: 1
 Xft.autohint: 0
 Xft.lcdfilter:  lcddefault
 Xft.hintstyle:  hintslight

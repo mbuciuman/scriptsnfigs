@@ -1,11 +1,11 @@
+# set home directory for script (to also support root)
+export HOME="/home/mbc"
+
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+ZSH=$HOME/.oh-my-zsh
 
 # gives terminal 256 color support
 export TERM="rxvt-256color"
-
-# set home directory for script (to also support root)
-export HOME="/home/mbuciuman-coman"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -173,7 +173,7 @@ alias gt='git log --oneline --decorate --all --graph --simplify-by-decoration'
 # alias zip='7z -tzip'
 
 #PATH
-#export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/mbuciuman-coman/.local/bin:/home/mbuciuman-coman/bin:/tools:/opt/idea-IU-163.12024.16/bin:/home/mbuciuman-coman/scripts:/home/mbuciuman-coman/git_repos/pycharm-community-2016.3.2/bin
+#export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/mbc/.local/bin:/home/mbc/bin:/tools:/opt/idea-IU-163.12024.16/bin:/home/mbc/scripts:/home/mbc/git_repos/pycharm-community-2016.3.2/bin
 # python 2.7
 #export PYTHONPATH=/data/git/hcp-automation-thirdparty:/data/git/hcp/python/product:/data/git/hcp-automation-library:/data/git/hcp-automation-tests:/data/git/loki:/usr/lib/python2.7/site-packages:/usr/lib/python3.6/site-packages:/usr/lib/python2.7
 # python 3.6
@@ -215,5 +215,5 @@ export EDITOR=/usr/bin/nvim
 
 # change dir to home directory (PUT AT EOF)
 cd
-export XAUTHORITY=/home/mbuciuman-coman/.Xauthority
+export XAUTHORITY=/home/mbc/.Xauthority
 export CDPATH='/data/git'
