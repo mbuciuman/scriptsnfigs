@@ -1,5 +1,5 @@
 # set home directory for script (to also support root)
-export HOME="/home/mbc"
+export HOME="/home/mbuciuman-coman"
 
 # Path to your oh-my-zsh installation.
 ZSH=$HOME/.oh-my-zsh
@@ -107,51 +107,8 @@ compinit -D
 
 # End of lines added by compinstall
 
-# Powerline Theme config stuff
-POWERLINE_RIGHT_A="date"
-POWERLINE_RIGHT_B="time replacement"
-POWERLINE_PATH="short"
-POWERLINE_GIT_CLEAN="✔"
-POWERLINE_GIT_DIRTY="✘"
-POWERLINE_GIT_ADDED="%F{green}✚%F{black}"
-POWERLINE_GIT_MODIFIED="%F{blue}✹%F{black}"
-POWERLINE_GIT_DELETED="%F{red}✖%F{black}"
-POWERLINE_GIT_UNTRACKED="%F{yellow}✭%F{black}"
-POWERLINE_GIT_RENAMED="➜"
-POWERLINE_GIT_UNMERGED="═"
-
-# Bullet-train Theme config stuff
-BULLETTRAIN_PROMPT_CHAR=\$
-BULLETTRAIN_TIME_BG=green
-BULLETTRAIN_TIME_FG=black
-BULLETTRAIN_DIR_BG=black
-BULLETTRAIN_DIR_FG=green
-BULLETTRAIN_STATUS_SHOW=false
-BULLETTRAIN_GIT_PROMPT_CMD="\$(custom_git_prompt)"
-custom_git_prompt() {
-     prompt=$(git_prompt_info)
-     prompt=${prompt//\//\ \ }
-     prompt=${prompt//_/\ }
-     echo ${prompt}
-}
-
-# Powerlevel9k Theme config stuff
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX=""
-POWERLEVEL9K_TIME_FOREGROUND='black'
-POWERLEVEL9K_TIME_BACKGROUND='white'
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='green'
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='black'
-POWERLEVEL9K_CONTEXT_ROOT_FOREGROUND='black'
-POWERLEVEL9K_CONTEXT_ROOT_BACKGROUND='red'
-POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND='black'
-POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='green'
-POWERLEVEL9K_VI_MODE_INSERT_FOREGROUND='black'
-POWERLEVEL9K_VI_MODE_INSERT_BACKGROUND='blue'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode)
+eval $(ssh-agent) 1>/dev/null
+ssh-add ~/.ssh/^(*.pub|known_hosts) < /dev/null &>/dev/null
 
 # legacy git prompt script
 # source /etc/profile.d/git-prompt.sh
@@ -173,7 +130,7 @@ alias gt='git log --oneline --decorate --all --graph --simplify-by-decoration'
 # alias zip='7z -tzip'
 
 #PATH
-#export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/mbc/.local/bin:/home/mbc/bin:/tools:/opt/idea-IU-163.12024.16/bin:/home/mbc/scripts:/home/mbc/git_repos/pycharm-community-2016.3.2/bin
+export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/mbuciuman-coman/.local/bin:/home/mbuciuman-coman/bin:/tools:/opt/idea-IU-163.12024.16/bin:/home/mbuciuman-coman/scripts:/home/mbuciuman-coman/git_repos/pycharm-community-2016.3.2/bin
 # python 2.7
 #export PYTHONPATH=/data/git/hcp-automation-thirdparty:/data/git/hcp/python/product:/data/git/hcp-automation-library:/data/git/hcp-automation-tests:/data/git/loki:/usr/lib/python2.7/site-packages:/usr/lib/python3.6/site-packages:/usr/lib/python2.7
 # python 3.6
