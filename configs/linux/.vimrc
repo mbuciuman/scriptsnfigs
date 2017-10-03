@@ -140,9 +140,11 @@ colorscheme badwolf
 " let g:indent_guides_enable_on_vim_startup = 1
 " let g:indent_guides_start_level = 2
 " let g:indent_guides_guide_size = 1
+autocmd FileType python setlocal tabstop=2 noexpandtab
 set tabstop=4
-set shiftwidth=4
-" set expandtab
+set noexpandtab
+nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+"
 
 " Keybind to show whitespace
 " nmap <F3> <Plug>ShowWhiteToggle
@@ -235,6 +237,7 @@ nmap <CR> o<Esc>k
 
 " removes trailing whitespace and changes all tabs to spaces
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>:ret<CR>
+" :command! -nargs=2 -range SuperRetab <line1>,<line2>s/\v%(^ *)@<= {<args>}/\t/g
 
 " syntax- :Run <bash_command>
 " command -nargs=+ Run :cexpr system('<args>') | copen

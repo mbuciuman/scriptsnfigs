@@ -1,5 +1,9 @@
 # set home directory for script (to also support root)
-export HOME="/home/mbuciuman-coman"
+if [ -d "/home/mbc" ]; then
+	export HOME="/home/mbc"
+else
+	export HOME="/home/mbuciuman-coman"
+fi
 
 # Path to your oh-my-zsh installation.
 ZSH=$HOME/.oh-my-zsh
@@ -108,7 +112,9 @@ compinit -D
 # End of lines added by compinstall
 
 eval $(ssh-agent) 1>/dev/null
-ssh-add ~/.ssh/^(*.pub|known_hosts) < /dev/null &>/dev/null
+if [ -d "~/.ssh" ]; then
+	ssh-add ~/.ssh/^(*.pub|known_hosts) < /dev/null &>/dev/null
+fi
 
 # legacy git prompt script
 # source /etc/profile.d/git-prompt.sh
@@ -130,7 +136,9 @@ alias gt='git log --oneline --decorate --all --graph --simplify-by-decoration'
 # alias zip='7z -tzip'
 
 #PATH
-export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/mbuciuman-coman/.local/bin:/home/mbuciuman-coman/bin:/tools:/opt/idea-IU-163.12024.16/bin:/home/mbuciuman-coman/scripts:/home/mbuciuman-coman/git_repos/pycharm-community-2016.3.2/bin
+if [ -d "/home/mbuciuman-coman" ]; then
+		export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/mbuciuman-coman/.local/bin:/home/mbuciuman-coman/bin:/tools:/opt/idea-IU-163.12024.16/bin:/home/mbuciuman-coman/scripts:/home/mbuciuman-coman/git_repos/pycharm-community-2016.3.2/bin
+fi
 # python 2.7
 #export PYTHONPATH=/data/git/hcp-automation-thirdparty:/data/git/hcp/python/product:/data/git/hcp-automation-library:/data/git/hcp-automation-tests:/data/git/loki:/usr/lib/python2.7/site-packages:/usr/lib/python3.6/site-packages:/usr/lib/python2.7
 # python 3.6
