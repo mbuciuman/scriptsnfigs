@@ -12,9 +12,9 @@ set shortmess+=I
 set backspace=indent,eol,start
 
 if has("vms")
-     set nobackup " do not keep a backup file, use versions instead
+    set nobackup " do not keep a backup file, use versions instead
 else
-     set backup " keep a backup file
+    set backup " keep a backup file
 endif
 set history=50 " keep 50 lines of command line history
 set ruler   " show the cursor position all the time
@@ -67,14 +67,14 @@ inoremap <C-U> <C-G>u<C-U>
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
-     set mouse=a
+    set mouse=a
 endif
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
-     syntax on
-     set hlsearch
+    syntax on
+    set hlsearch
 endif
 
 " Only do this part when compiled with support for autocommands.
@@ -96,9 +96,9 @@ endif
 
 " Convenient command to see the difference between the current buffer and the file it was loaded from, thus the changes you made. Only define it when not defined already.
 if !exists(":DiffOrig")
-     command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ |
-     diffthis
-                    \ | wincmd p | diffthis
+    command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ |
+    diffthis
+                \ | wincmd p | diffthis
 endif
 
 " Sets up line number displayed over relative line number (so line number shows up over the relative number's 0)
@@ -137,13 +137,13 @@ colorscheme badwolf
 " let g:colorscheme_switcher_keep_background = 1
 
 " Indent settings
-" let g:indent_guides_enable_on_vim_startup = 1
-" let g:indent_guides_start_level = 2
-" let g:indent_guides_guide_size = 1
-autocmd FileType python setlocal tabstop=2 noexpandtab
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
 set tabstop=4
-set noexpandtab
-nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
+set shiftwidth=4
+set expandtab
+"nnoremap    <F2> :<C-U>setlocal lcs=tab:>-,trail:-,eol:$ list! list? <CR>
 "
 
 " Keybind to show whitespace
@@ -241,3 +241,6 @@ nnoremap <Leader>rtw :%s/\s\+$//e<CR>:ret<CR>
 
 " syntax- :Run <bash_command>
 " command -nargs=+ Run :cexpr system('<args>') | copen
+
+" autoformat on save
+au BufWrite * :Autoformat
