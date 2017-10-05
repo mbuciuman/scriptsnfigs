@@ -94,10 +94,6 @@ bindkey -k k4 select 4
 #bindkey -m "^[[5;2~" stuff ^u
 #bindkey -m "^[[6;2~" stuff ^d
 
-# Window numbering starts at 1, not 0.
-bind c screen 1
-bind 0 select 10
-
 # Login toggle is too close to screen redraw.  How about explicitly setting
 # login state, anyway?
 bind 'L'

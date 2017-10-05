@@ -112,7 +112,7 @@ compinit -D
 # End of lines added by compinstall
 
 eval $(ssh-agent) 1>/dev/null
-if [ -d "~/.ssh" ]; then
+if [ -d "$HOME/.ssh" ]; then
 	ssh-add ~/.ssh/^(*.pub|known_hosts) < /dev/null &>/dev/null
 fi
 
