@@ -1,1 +1,0 @@
-/home/mbuciuman-coman/.vimrc
