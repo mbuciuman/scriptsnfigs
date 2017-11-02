@@ -243,8 +243,8 @@ nnoremap <Leader>rtw :%s/\s\+$//e<CR>:ret<CR>
 " command -nargs=+ Run :cexpr system('<args>') | copen
 
 " autoformat on save
-au BufWritePost * :Autoformat
-let g:easytags_events = ['BufWritePost']
-let g:easytags_async = 0
+"au BufWritePost * :Autoformat
+"let g:easytags_events = ['BufWritePost']
+"let g:easytags_async = 0
 
 nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
