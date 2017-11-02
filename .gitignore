@@ -1,5 +1,4 @@
 *~
 init.vim
 *.swp
-*.netwrhist
-*/linux/.vim/bundle/jedi-vim/pythonx/jedi_vim.pyc
+*.netrwhist
