@@ -1,8 +1,8 @@
 # set home directory for script (to also support root)
 if [ -d "/home/mbc" ]; then
-	export HOME="/home/mbc"
+    export HOME="/home/mbc"
 else
-	export HOME="/home/mbuciuman-coman"
+    export HOME="/home/mbuciuman-coman"
 fi
 
 # Path to your oh-my-zsh installation.
@@ -90,7 +90,7 @@ export ARCHFLAGS="-arch x86_64"
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
-     mkdir $ZSH_CACHE_DIR
+    mkdir $ZSH_CACHE_DIR
 fi
 
 source $ZSH/oh-my-zsh.sh
@@ -113,7 +113,7 @@ compinit -D
 
 eval $(ssh-agent) 1>/dev/null
 if [ -d "$HOME/.ssh" ]; then
-	ssh-add ~/.ssh/^(*.pub|known_hosts) < /dev/null &>/dev/null
+    ssh-add ~/.ssh/^(*.pub|known_hosts) < /dev/null &>/dev/null
 fi
 
 # legacy git prompt script
@@ -128,6 +128,7 @@ alias d2u='sudo find . -type f -exec dos2unix {} \;'
 alias se='sudoedit'
 alias vim='nvim'
 alias duy='sudo dnf update -y --best --allowerasing'
+alias st="st -f 'PragmataPro for Powerline:pixelsize=12:antialias=true:autohint=true'"
 
 alias idea='/opt/idea-IU-162.2228.15/bin/idea.sh'
 alias gt='git log --oneline --decorate --all --graph --simplify-by-decoration'
@@ -137,10 +138,10 @@ alias gt='git log --oneline --decorate --all --graph --simplify-by-decoration'
 
 #PATH
 if [ -d "/home/mbuciuman-coman" ]; then
-		export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/mbuciuman-coman/.local/bin:/home/mbuciuman-coman/bin:/tools:/opt/idea-IU-163.12024.16/bin:/home/mbuciuman-coman/scripts:/home/mbuciuman-coman/git_repos/pycharm-community-2016.3.2/bin
+    export PATH=$PATH:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/home/mbuciuman-coman/.local/bin:/home/mbuciuman-coman/bin:/tools:/opt/idea-IU-163.12024.16/bin:/home/mbuciuman-coman/scripts:/home/mbuciuman-coman/git_repos/pycharm-community-2016.3.2/bin
+    # python 2.7
+    export PYTHONPATH=/data/git/hcp-automation-thirdparty:/data/git/hcp/python/product:/data/git/hcp-automation-library:/data/git/hcp-automation-tests:/data/git/loki:/usr/lib/python2.7/site-packages:/usr/lib/python3.6/site-packages:/usr/lib/python2.7
 fi
-# python 2.7
-#export PYTHONPATH=/data/git/hcp-automation-thirdparty:/data/git/hcp/python/product:/data/git/hcp-automation-library:/data/git/hcp-automation-tests:/data/git/loki:/usr/lib/python2.7/site-packages:/usr/lib/python3.6/site-packages:/usr/lib/python2.7
 # python 3.6
 #export PYTHONPATH=/data/git/hcp-automation-thirdparty:/data/git/hcp/python/product:/data/git/hcp-automation-library:/data/git/hcp-automation-tests:/data/git/loki:/usr/lib/python2.7/site-packages:/usr/lib/python3.6/site-packages:/usr/lib/python3.6
 
@@ -148,7 +149,7 @@ fi
 alias gitbl='git log --first-parent --no-merges'
 
 parse_git_branch() {
-     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 alias pdiff='/data/git/diff-tools/pdiff/pdiff'
