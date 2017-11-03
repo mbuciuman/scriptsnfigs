@@ -117,7 +117,9 @@ filetype plugin on
 
 " vim-airline config lines
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ''
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+" let g:airline#extensions#tabline#left_sep = ''
 " let g:airline#extensions#syntastic#enabled = 0
 let g:airline_powerline_fonts = 1
 set encoding=utf-8
@@ -247,4 +249,9 @@ nnoremap <Leader>rtw :%s/\s\+$//e<CR>:ret<CR>
 "let g:easytags_events = ['BufWritePost']
 "let g:easytags_async = 0
 
+"double click to highlight all words
 nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
+
+"close buffer without window
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>.
+
