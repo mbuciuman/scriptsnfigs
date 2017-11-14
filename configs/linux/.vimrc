@@ -254,3 +254,6 @@ nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\
 
 "close buffer without window
 map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
+set list
+set listchars=tab:\|\ ,trail:.,eol:◊,extends:►,precedes:◄
