@@ -253,5 +253,4 @@ nnoremap <Leader>rtw :%s/\s\+$//e<CR>:ret<CR>
 nnoremap <silent> <2-LeftMouse> :let @/='\V\<'.escape(expand('<cword>'), '\').'\>'<cr>:set hls<cr>
 
 "close buffer without window
-map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>.
-
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
