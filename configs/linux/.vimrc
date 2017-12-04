@@ -257,3 +257,6 @@ map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 
 set list
 set listchars=tab:\|\ ,trail:.,eol:◊,extends:►,precedes:◄
+
+" Search for visually selected text
+vnoremap // y/<C-R>"<CR>
